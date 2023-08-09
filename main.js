@@ -184,6 +184,7 @@ about.addEventListener('mouseleave' , function(){
 
 let ms11 = document.querySelector(".ms11");
 let lognn = document.querySelector(".log-nn");
+let logout = document.querySelector(".log-out");
 let logbx = document.querySelector(".log-box");
 let out = document.querySelector(".out");
 let cncl = document.querySelector(".cencel");
@@ -202,6 +203,9 @@ ms11.addEventListener('click' , function(){
 })
 cncl.addEventListener('click' , function(){
     logbx.classList.add("log-anim2")
+    lognn.classList.remove("log-db")
+}) 
+logout.addEventListener('click' , function(){
     lognn.classList.remove("log-db")
 }) 
 out.onclick = function(){
@@ -260,6 +264,16 @@ lb8.addEventListener('click' , function(){
 
 // Input Value Other input value =
 
+let rdb = document.querySelector('.recharge-nn');
+let rbigbx = document.querySelector('.recharge-big-box');
+// let recharge2 = document.querySelector(".buy-recharge");
+
+recharge.addEventListener('click' , function(){
+    rdb.classList.toggle('recharge-db');
+})
+rbigbx.addEventListener('click' , function(){
+rdb.classList.remove('recharge-db');
+})
 // dolar.oninput = showValue;
 // coins.oninput = showValue;
 

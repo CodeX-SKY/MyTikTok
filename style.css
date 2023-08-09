@@ -63,9 +63,12 @@ html {
 
 
 /* Recharge ! */
-/* .recharge-nn {
+.recharge-nn {
     display: none;
-} */
+}
+.recharge-db {
+    display: block;
+}
 /* Recharge ! */
 
 
@@ -258,7 +261,24 @@ html {
 }
 /* ICON CLICK */
 
-
+/* Big Flex */
+.search-or-account-flex {
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto auto auto auto;
+}
+.search-donate-input {
+    width: 305px;
+    padding: 14px 16px;
+    font-size: 16px;
+    border-radius: 10px;
+    color: rgba(0, 0, 0, 0.80);
+    letter-spacing: -0.4px;
+    background-color: transparent;
+    font-weight: 400;
+    border: 1px solid #eaeaea;
+    outline: none;
+  }
 /* ACCOUNT */
 .user{
     width: 45px;
@@ -681,12 +701,12 @@ html {
 /* Log Out */
 .log-anim {
     animation: loganim 0.3s linear !important;
-    transition: all 0.3s linear;
+    /* animation: loganim2 0.3s linear !important; */
 }
-.log-anim2 {
-    animation: loganim2 0.3s linear !important;
+/* .log-anim2 {
     transition: all 0.3s linear;
-}
+    transition: all 0.3s linear;
+} */
 .log-box {
     background-color: #fff;
     border-radius: 8px;
@@ -771,6 +791,8 @@ html {
     flex-direction: column;
     row-gap: 80px;
     box-shadow: 0 0 50px 10px rgba(0, 0, 0, 0.2);
+    animation: loganim 0.3s linear !important;
+    /* animation: loganim2 0.3s linear !important; */
 }
 .check {
     width: 100px;
