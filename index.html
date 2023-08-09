@@ -52,7 +52,7 @@
                 </div>
                 <div class="search-or-account-flex">
                     <div class="search-donate">
-                        <input class="search-donate-input" type="text" placeholder="User Name" maxlength="30">
+                        <input class="search-donate-input" id="donate" type="text" placeholder="User Name" maxlength="30">
                     </div>
                     <div class="account">
                         <img class="user" src="Images/User/user.jpg">
@@ -212,7 +212,7 @@
                     <div class="pay-money">
                         <p class="total">Total</p>
                         <span>$</span>
-                        <input class="pl-money" type="text" onkeypress="isInputNumber(event)" maxlength="6">
+                        <input class="pl-money" type="text" onkeypress="isInputNumber(event)" maxlength="10">
                     </div>
                     <input class="buy" type="submit" value="Recharge" required="required">
                 </div>
@@ -286,10 +286,10 @@
             </div>
         </div>
     </div>
-    <div class="recharge-nn">
+    <div class="recharge-nn"> 
         <div class="recharge-big-box">
             <div class="recharge-box">
-                <video class="check" autoplay src="Images/Others/check-vid.mp4"></video>
+                <video class="check" autoplay loop muted src="Images/Others/check-vid.mp4"></video>
                 <div class="recharge-inputs">
                     <p class="money-change-coin">You change <span>$</span><input class="mn-input" id="show" type="text" maxlength="20"  value="10,600"> to Client Account</p>
                     <p class="number-change-coin">Client can use <input class="nm-input" id="result" type="text" maxlength="10"  value="1,000,000"> coin send <span>Virtual Gifts</span></p>

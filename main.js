@@ -256,7 +256,7 @@ lb7.addEventListener('click' , function(){
     recharge.classList.add("buy-recharge");
 })
 lb8.addEventListener('click' , function(){
-    total.value = "185";
+    total.value = "10,600";
     recharge.classList.add("buy-recharge");
 })
 // Test Total $
