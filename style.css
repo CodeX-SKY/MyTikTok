@@ -13,15 +13,15 @@ html {
     /* overflow-y: auto; */
     height: 705px;
 }
+
+
+/* Log Out */
+
 .log-nn {
-    /* opacity: 0; */
-    /* animation: rmanim 0.3s linear; */
     display: none !important;
 }
 .log-db {
-    /* opacity: 1; */
     display: block !important; 
-    /* animation: addanim 0.3s linear; */
 }
 .log-out {
     top: 0;
@@ -58,6 +58,15 @@ html {
         opacity: 1;
     }
 } */
+
+/* Log Out */
+
+
+/* Recharge ! */
+/* .recharge-nn {
+    display: none;
+} */
+/* Recharge ! */
 
 
 /* TOP */
@@ -468,6 +477,7 @@ html {
     border-bottom: 1px solid #161823;
     font-weight: 400;
     font-family: 'Rubik', sans-serif;
+    background-color: transparent;
 }
 /* .pay-box {
     transform: translateY(-10px);
@@ -483,10 +493,12 @@ html {
     margin-bottom: 14px;
 }
 .pl-money {
+    width: 100px;
     pointer-events: none;
     outline: none;
     border: none;
     font-size: 16px;
+    background-color: transparent;  
     font-weight: 600;
 }
 .pay-money {
@@ -679,6 +691,7 @@ html {
     background-color: #fff;
     border-radius: 8px;
     padding: 35px 30px;
+    box-shadow: 0 0 50px 10px rgba(0, 0, 0, 0.2);
 }
 .sure {
     width: 70%;
@@ -732,3 +745,75 @@ html {
     }
 }
 /* Log Animation */
+
+
+/* Recharge Boxes */
+.recharge-big-box {
+    top: 0;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+    z-index: 100;
+}
+.recharge-box {
+    width: 550px;
+    height: 350px;
+    background-color: #edeff1;
+    /* padding: 80px; */
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 80px;
+    box-shadow: 0 0 50px 10px rgba(0, 0, 0, 0.2);
+}
+.check {
+    width: 100px;
+    height: auto;
+    /* animation: check 0.6s linear; */
+    background: transparent;
+}
+.recharge-inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 14px;
+    row-gap: 4px;
+}
+.money-change-coin span {
+    font-weight: 600;
+}
+.number-change-coin span {
+    font-weight: 600;
+}
+.mn-input {
+    width: 45px;
+    color: #000;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    pointer-events: none;
+    /* border-bottom: 1px solid #000; */
+    margin-left: 2px;
+}
+.nm-input {
+    width: 66px;
+    color: #000;
+    outline: none;
+    border: none;
+    padding: 0 2px;
+    background-color: transparent;
+    pointer-events: none;
+    /* border-bottom: 1px solid #000; */
+}
+@keyframes check {
+    0% {
+        width: 30px;
+    }
+}
+/* Recharge Boxes */

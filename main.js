@@ -256,3 +256,16 @@ lb8.addEventListener('click' , function(){
     recharge.classList.add("buy-recharge");
 })
 // Test Total $
+
+
+// Input Value Other input value =
+
+// dolar.oninput = showValue;
+// coins.oninput = showValue;
+
+
+// function showValue(){
+//     showc cx[].value = this.value;
+// }
+
+// Input Value Other input value =
