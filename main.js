@@ -22,19 +22,33 @@ ict3.onclick = function(){
 let usmn = document.querySelector('.user-menu');
 
 ict3.addEventListener('mouseenter' , function(){
-    usmn.classList.add("user-hover");
+    usmn.classList.add("user-show");
     ict1.classList.remove("all-db");
     ict2.classList.remove("all-db");
     ict3.classList.remove("all-db");
 })  
 // ict3.addEventListener('mouseleave' , function(){
-//     usmn.classList.remove("user-hover");
+//     usmn.classList.remove("user-show");
 // })
 usmn.addEventListener('mouseenter' , function(){
-    usmn.classList.add("user-hover");
+    // usmn.classList.add("user-show");
+    if (usmn.classList.contains("user-show")){
+        usmn.classList.remove("user-show")
+        usmn.addEventListener('animationend' , remove);
+    } else {
+        usmn.classList.add("user-show")
+        usmn.removeEventListener('animationend' , remove);
+    }
 })  
 usmn.addEventListener('mouseleave' , function(){
-    usmn.classList.remove("user-hover");
+    // usmn.classList.remove("user-hide");
+    if (usmn.classList.contains("user-hide")){
+        usmn.classList.remove("user-show")
+        // usmn.addEventListener('animationend' , remove);
+    } else {
+        usmn.classList.add("user-hide")
+        usmn.removeEventListener('animationend' , remove);
+    }
 })
 
 // Input
@@ -152,7 +166,7 @@ ict1.addEventListener('mouseenter' , function(){
     pmb1.classList.add("all-db");
     ict2.classList.remove("all-db");
     ict3.classList.remove("all-db");
-    usmn.classList.remove("user-hover");
+    usmn.classList.remove("user-show");
 })  
 ict1.addEventListener('mouseleave' , function(){
     pmb1.classList.remove("all-db");
@@ -162,17 +176,30 @@ ict2.addEventListener('mouseenter' , function(){
     pmb2.classList.add("all-db");
     ict1.classList.remove("all-db");
     ict3.classList.remove("all-db");
-    usmn.classList.remove("user-hover");
+    if (usmn.classList.contains("user-hide")){
+        usmn.classList.add("user-show");
+        usmn.classList.remove("user-hide");
+    } else {
+        usmn.classList.remove("user-show")
+        usmn.classList.add("user-hide")
+    }
 })  
 ict2.addEventListener('mouseleave' , function(){
     pmb2.classList.remove("all-db");
+    if (usmn.classList.contains("user-show")){
+        usmn.classList.remove("user-show");
+        usmn.classList.add("user-hide");
+    } else {
+        usmn.classList.add("user-show")
+        usmn.classList.remove("user-hide")
+    }
 })
 
 about.addEventListener('mouseenter' , function(){
     pmb3.classList.add("all-db");
     ict2.classList.remove("all-db");
     ict3.classList.remove("all-db");
-    usmn.classList.remove("user-hover");
+    usmn.classList.remove("user-show");
 })   
 about.addEventListener('mouseleave' , function(){
     pmb3.classList.remove("all-db");
@@ -181,6 +208,11 @@ about.addEventListener('mouseleave' , function(){
 // Reading
 
 // Log out
+function remove(){
+    lognn.classList.remove("log-show", "log-hide");
+    rdb.classList.remove("recharge-show", "recharge-hide");
+    usmn.classList.remove("user-show" , "user-hide");
+}
 
 let ms11 = document.querySelector(".ms11");
 let lognn = document.querySelector(".log-nn");
@@ -190,23 +222,47 @@ let out = document.querySelector(".out");
 let cncl = document.querySelector(".cencel");
 
 ms11.addEventListener('click' , function(){
-    if(lognn.classList.contains("log-db")){
-        lognn.classList.remove("log-db")
+
+    usmn.classList.remove("user-show");
+
+    if(lognn.classList.contains("log-show")){
+        lognn.classList.add("log-hide")
+        lognn.addEventListener('animationend' , remove);
     } else {
-        lognn.classList.add("log-db")
+        lognn.classList.add("log-show")
+        lognn.removeEventListener('animationend' , remove);
     }
-    if(logbx.classList.contains("log-anim")){
-        logbx.classList.remove("log-anim")
-    } else {
-        logbx.classList.add("log-anim")
-    }
+    
 })
 cncl.addEventListener('click' , function(){
-    logbx.classList.add("log-anim2")
-    lognn.classList.remove("log-db")
+
+    if (lognn.classList.contains("log-hide")){
+        lognn.classList.add("log-show")
+        lognn.addEventListener('animationend' , remove);
+    } else {
+        lognn.classList.add("log-hide")
+        lognn.removeEventListener('animationend' , remove);
+    }
+    
 }) 
 logout.addEventListener('click' , function(){
-    lognn.classList.remove("log-db")
+    
+    if (lognn.classList.contains("log-hide")){
+        lognn.classList.add("log-hide")
+        lognn.addEventListener('animationend' , remove);
+    } else {
+        lognn.classList.add("log-hide")
+        lognn.removeEventListener('animationend' , remove);
+    }
+
+    if (lognn.classList.contains("log-show")){
+        lognn.classList.add("log-show")
+        lognn.addEventListener('animationend' , remove);
+    } else {
+        lognn.classList.add("log-show")
+        lognn.removeEventListener('animationend' , remove);
+    }
+
 }) 
 out.onclick = function(){
     url = "https://www.tiktok.com/logout?redirect_url=https://www.tiktok.com/coin";
@@ -230,34 +286,50 @@ let tm = document.querySelector(".coin-sold-number");
 lb1.addEventListener('click' , function(){
     total.value = "0.74";
     recharge.classList.add("buy-recharge");
+    show1.value = "0.74";
+    show2.value = "70";
 })
 lb2.addEventListener('click' , function(){
     total.value = "3.7";
     recharge.classList.add("buy-recharge");
+    show1.value = "3.7";
+    show2.value = "350";
 })
 lb3.addEventListener('click' , function(){
     total.value = "7.4";
     recharge.classList.add("buy-recharge");
+    show1.value = "7.4";
+    show2.value = "700";
 })
 lb4.addEventListener('click' , function(){
     total.value = "14.8";
     recharge.classList.add("buy-recharge");
+    show1.value = "14.8";
+    show2.value = "1400";
 })
 lb5.addEventListener('click' , function(){
     total.value = "37";
     recharge.classList.add("buy-recharge");
+    show1.value = "37";
+    show2.value = "3,500";
 })
 lb6.addEventListener('click' , function(){
     total.value = "74";
     recharge.classList.add("buy-recharge");
+    show1.value = "74";
+    show2.value = "7,000";
 })
 lb7.addEventListener('click' , function(){
     total.value = "185";
     recharge.classList.add("buy-recharge");
+    show1.value = "185";
+    show2.value = "17,500";
 })
 lb8.addEventListener('click' , function(){
     total.value = "10,600";
     recharge.classList.add("buy-recharge");
+    show1.value = "10,600";
+    show2.value = "1,000,000";
 })
 // Test Total $
 
@@ -266,20 +338,38 @@ lb8.addEventListener('click' , function(){
 
 let rdb = document.querySelector('.recharge-nn');
 let rbigbx = document.querySelector('.recharge-big-box');
-// let recharge2 = document.querySelector(".buy-recharge");
 
 recharge.addEventListener('click' , function(){
-    rdb.classList.toggle('recharge-db');
+    if (rdb.classList.contains('recharge-show')){
+        rdb.classList.add('recharge-hide')
+        rdb.addEventListener('animationend' , remove);
+    } else {
+        rdb.classList.add('recharge-show');
+        rdb.removeEventListener('animationend' , remove);
+    }
 })
 rbigbx.addEventListener('click' , function(){
-rdb.classList.remove('recharge-db');
+    if (rdb.classList.contains('recharge-hide')){
+        rdb.classList.add('recharge-show')
+        rdb.removeEventListener('animationend' , remove);
+    } else {
+        rdb.classList.add('recharge-hide');
+        rdb.addEventListener('animationend' , remove);
+    }
 })
-// dolar.oninput = showValue;
-// coins.oninput = showValue;
 
 
-// function showValue(){
-//     showc cx[].value = this.value;
+// Input Value Other input value =
+
+total.oninput = showValue;
+// coin.oninput = showValue2;
+
+
+function showValue(){
+    show1.value = this.value;
+}
+
+// function showValue2(){
+//     show2.value = this.value;
 // }
-
 // Input Value Other input value =

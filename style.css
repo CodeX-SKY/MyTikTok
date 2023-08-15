@@ -3,6 +3,9 @@
     font-family: 'Inter', sans-serif;
     padding: 0;
     margin: 0;
+    /* background-color: #000 !important; */
+    /* color: #fff !important; */
+    /* border: 1px solid red !important; */
 }
 html {
     scroll-behavior: smooth;
@@ -20,8 +23,12 @@ html {
 .log-nn {
     display: none !important;
 }
-.log-db {
+.log-show {
     display: block !important; 
+    animation: LogShow 0.3s linear;
+}
+.log-hide {
+    animation: LogHide 0.3s linear !important;
 }
 .log-out {
     top: 0;
@@ -33,29 +40,19 @@ html {
     min-height: 100vh;
     background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
     z-index: 100;
+    /* transition: all 0.3s linear; */
 }
-/* @keyframes rmanim {
+/* @keyframes LogShow {
     0% {
-        transform: scale(1);
-        display: block;
+        opacity: 0;
+    }
+}
+@keyframes LogHide {
+    0% {
         opacity: 1;
     }
     100% {
-        transform: scale(0);
-        display: none;
         opacity: 0;
-    }
-} */
-/* @keyframes addanim {
-    0% {
-        transform: scale(0);
-        display: none;
-        opacity: 0;
-    }
-    100% {
-        transform: scale(1);
-        display: block;
-        opacity: 1;
     }
 } */
 
@@ -66,9 +63,12 @@ html {
 .recharge-nn {
     display: none;
 }
-.recharge-db {
+.recharge-show {
     display: block;
 }
+/* .recharge-hide {
+    display: block;
+} */
 /* Recharge ! */
 
 
@@ -268,23 +268,24 @@ html {
     grid-template-columns: auto auto auto auto;
 }
 .search-donate-input {
-    width: 305px;
-    padding: 14px 16px;
+    width: 360px;
+    padding: 14px;
     font-size: 16px;
-    border-radius: 10px;
+    border-radius: 5px;
     color: rgba(0, 0, 0, 0.80);
     letter-spacing: -0.4px;
     background-color: transparent;
     font-weight: 400;
     border: 1px solid #eaeaea;
     outline: none;
-  }
+}
 /* ACCOUNT */
 .user{
     width: 45px;
     height: 45px;
     border-radius: 50%;
     opacity: 0.8;
+    overflow: hidden;
 }
 .account-coin {
     padding-left: 100px;
@@ -418,6 +419,7 @@ html {
     display: flex;
     align-items: center;
     column-gap: 10px;
+    overflow: hidden;
 }
 .secret {
     position: absolute;
@@ -440,6 +442,7 @@ html {
 }
 .secret:checked ~ .border-box .border-box-top  .number-cs {
     display: block;
+    font-size: 24px;
 }
 .secret:checked ~ .border-box .cs {
     column-gap: 2px;
@@ -477,6 +480,7 @@ html {
     font-weight: 600;
     font-size: 14px;
     font-family: 'Inter' , sans-serif;
+    overflow: hidden;
 }
 .coin-number-dn {
     font-size: 22px;
@@ -486,9 +490,10 @@ html {
 .coin-number-dn-cs {
     font-size: 22px;
     font-weight: 700;
+    padding: 1px 0;
 }
 .number-cs {
-    width: 135px;
+    width: 120px;
     display: none;
     text-align: center;
     font-size: 25px;
@@ -499,9 +504,6 @@ html {
     font-family: 'Rubik', sans-serif;
     background-color: transparent;
 }
-/* .pay-box {
-    transform: translateY(-10px);
-} */
 /* Buy */
 
 
@@ -588,14 +590,17 @@ html {
     box-shadow: 0 0 10px 1px #eaeaea;
     font-family: 'Rubik' , sans-serif;
     cursor: pointer;
-    transition: all 0.3s linear;
+    /* transition: all 0.3s linear; */
 }
 .user-menu:hover {
     display: block;
 }
-.user-hover {
+.user-show {
     display: block;
 }
+/* .user-hide {
+    animation: ushide 1s linear;
+} */
 .menu-section {
     display: flex;
     align-items: center;
@@ -623,6 +628,12 @@ html {
     height: 1px;
     background-color: #eaeaea;
 }
+
+/* @keyframes ushide {
+    100% {
+        opacity: 0;
+    }
+} */
 /* User Menu */
 
 
@@ -699,14 +710,12 @@ html {
 
 
 /* Log Out */
-.log-anim {
-    animation: loganim 0.3s linear !important;
-    /* animation: loganim2 0.3s linear !important; */
+.log-show .log-box {
+    animation: loganim 0.3s linear;
 }
-/* .log-anim2 {
-    transition: all 0.3s linear;
-    transition: all 0.3s linear;
-} */
+.log-hide .log-box {
+    animation: loganim2 0.15s linear;
+}
 .log-box {
     background-color: #fff;
     border-radius: 8px;
@@ -757,17 +766,21 @@ html {
     }
 }
 @keyframes loganim2{
-    0% {
-        transform: scale(1);
-    }
     100% {
-        transform: scale(0);
+       /* scale: 0; */
+       opacity: 0;
     }
 }
 /* Log Animation */
 
 
 /* Recharge Boxes */
+.recharge-show .recharge-box {
+    animation: loganim 0.3s linear !important;
+}
+.recharge-hide .recharge-box {
+    animation: loganim2 0.3s linear !important;
+}
 .recharge-big-box {
     top: 0;
     position: fixed;
@@ -783,7 +796,6 @@ html {
     width: 550px;
     height: 350px;
     background-color: #edeff1;
-    /* padding: 80px; */
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -791,8 +803,6 @@ html {
     flex-direction: column;
     row-gap: 80px;
     box-shadow: 0 0 50px 10px rgba(0, 0, 0, 0.2);
-    animation: loganim 0.3s linear !important;
-    /* animation: loganim2 0.3s linear !important; */
 }
 .check {
     width: 100px;
@@ -821,7 +831,6 @@ html {
     background-color: transparent;
     pointer-events: none;
     /* border-bottom: 1px solid #000; */
-    margin-left: 2px;
 }
 .nm-input {
     width: 66px;

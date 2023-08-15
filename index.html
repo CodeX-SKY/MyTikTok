@@ -52,7 +52,7 @@
                 </div>
                 <div class="search-or-account-flex">
                     <div class="search-donate">
-                        <input class="search-donate-input" id="donate" type="text" placeholder="User Name" maxlength="30">
+                        <input class="search-donate-input" id="donate" type="text" placeholder="User Name" maxlength="32">
                     </div>
                     <div class="account">
                         <img class="user" src="Images/User/user.jpg">
@@ -82,7 +82,7 @@
                                         <img class="white-tok-size-dn" src="Images/Others/white.png">
                                     </div>
                                 </div>
-                                <p class="coin-number-dn">70</p>
+                                <p class="coin-number-dn" id="coin" >70</p>
                             </div>
                             <div class="border-box-bottom">
                                 <p class="coin-sold-number">$ 0.74</p>
@@ -98,7 +98,7 @@
                                         <img class="white-tok-size-dn" src="Images/Others/white.png">
                                     </div>
                                 </div>
-                                <p class="coin-number-dn font-family-mts">350</p>
+                                <p class="coin-number-dn font-family-mts" id="coin" >350</p>
                             </div>
                             <div class="border-box-bottom">
                                 <p class="coin-sold-number font-family-mts">$ <span class="font-family-mts">3</span>.7</p>
@@ -114,7 +114,7 @@
                                         <img class="white-tok-size-dn" src="Images/Others/white.png">
                                     </div>
                                 </div>
-                                <p class="coin-number-dn">700</p>
+                                <p class="coin-number-dn" id="coin" >700</p>
                             </div>
                             <div class="border-box-bottom">
                                 <p class="coin-sold-number">$ 7.4</p>
@@ -130,7 +130,7 @@
                                         <img class="white-tok-size-dn" src="Images/Others/white.png">
                                     </div>
                                 </div>
-                                <p class="coin-number-dn">1,400</p>
+                                <p class="coin-number-dn" id="coin" >1,400</p>
                             </div>
                             <div class="border-box-bottom">
                                 <p class="coin-sold-number">$ 14.8</p>
@@ -146,7 +146,7 @@
                                         <img class="white-tok-size-dn" src="Images/Others/white.png">
                                     </div>
                                 </div>
-                                <p class="coin-number-dn"><span class="font-family-mts">3</span>,500</p>
+                                <p class="coin-number-dn" id="coin" ><span class="font-family-mts">3</span>,500</p>
                             </div>
                             <div class="border-box-bottom">
                                 <p class="coin-sold-number">$ <span class="font-family-mts">3</span>7</p>
@@ -162,7 +162,7 @@
                                         <img class="white-tok-size-dn" src="Images/Others/white.png">
                                     </div>
                                 </div>
-                                <p class="coin-number-dn">7,000</p>
+                                <p class="coin-number-dn" id="coin" >7,000</p>
                             </div>
                             <div class="border-box-bottom">
                                 <p class="coin-sold-number">$ 74</p>
@@ -178,7 +178,7 @@
                                         <img class="white-tok-size-dn" src="Images/Others/white.png">
                                     </div>
                                 </div>
-                                <p class="coin-number-dn">17,500</p>
+                                <p class="coin-number-dn" id="coin" >17,500</p>
                             </div>
                             <div class="border-box-bottom">
                                 <p class="coin-sold-number">$ 185</p>
@@ -194,7 +194,7 @@
                                         <img class="white-tok-size-dn" src="Images/Others/white.png">
                                     </div>
                                 </div>
-                                <input type="text" id="coins" class="number-cs" onkeypress="isInputNumber(event)" maxlength="8">
+                                <input type="text" id="coins" class="number-cs" value="1,000,000" onkeypress="isInputNumber(event)" maxlength="7">
                                 <p class="coin-number-dn-cs">Custom</p>
                             </div>
                             <div class="border-box-bottom">
@@ -212,7 +212,7 @@
                     <div class="pay-money">
                         <p class="total">Total</p>
                         <span>$</span>
-                        <input class="pl-money" type="text" onkeypress="isInputNumber(event)" maxlength="10">
+                        <input class="pl-money" id="total" type="text" value="0" onkeypress="isInputNumber(event)" maxlength="10">
                     </div>
                     <input class="buy" type="submit" value="Recharge" required="required">
                 </div>
@@ -286,17 +286,19 @@
             </div>
         </div>
     </div>
+
     <div class="recharge-nn"> 
         <div class="recharge-big-box">
             <div class="recharge-box">
                 <video class="check" autoplay loop muted src="Images/Others/check-vid.mp4"></video>
                 <div class="recharge-inputs">
-                    <p class="money-change-coin">You change <span>$</span><input class="mn-input" id="show" type="text" maxlength="20"  value="10,600"> to Client Account</p>
-                    <p class="number-change-coin">Client can use <input class="nm-input" id="result" type="text" maxlength="10"  value="1,000,000"> coin send <span>Virtual Gifts</span></p>
+                    <p class="money-change-coin">You change <span>$ </span><input class="mn-input" id="show1" type="text" maxlength="20"> to Client Account</p>
+                    <p class="number-change-coin">Client can use <input class="nm-input" id="show2" type="text" maxlength="10"> coin send <span>Virtual Gifts</span></p>
                 </div>
             </div>
         </div>
     </div>
+
     <div class="log-nn">
         <div class="log-out">
             <div class="log-box">
