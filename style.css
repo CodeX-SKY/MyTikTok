@@ -3,6 +3,11 @@
     font-family: 'Inter', sans-serif;
     padding: 0;
     margin: 0;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+    user-zoom: none;
     /* background-color: #000 !important; */
     /* color: #fff !important; */
     /* border: 1px solid red !important; */
@@ -807,6 +812,7 @@ html {
 .check {
     width: 100px;
     height: auto;
+    /* background: url("Images/Others/check-vid.mp4"); */
     /* animation: check 0.6s linear; */
     background: transparent;
 }
@@ -824,7 +830,6 @@ html {
     font-weight: 600;
 }
 .mn-input {
-    width: 45px;
     color: #000;
     outline: none;
     border: none;
@@ -833,7 +838,6 @@ html {
     /* border-bottom: 1px solid #000; */
 }
 .nm-input {
-    width: 66px;
     color: #000;
     outline: none;
     border: none;
@@ -841,6 +845,54 @@ html {
     background-color: transparent;
     pointer-events: none;
     /* border-bottom: 1px solid #000; */
+}
+.nmi1 {
+    width: 20px; 
+}
+.mni1 {
+    width: 30px;
+}
+.nmi2 {
+    width: 20px;
+}
+.mni2 {
+    width: 20px;
+}
+.nmi3 {
+    width: 30px;
+}
+.mni3 {
+    width: 20px;
+}
+.nmi4 {
+    width: 35px;
+}
+.mni4 {
+    width: 30px;
+}
+.nmi5 {
+    width: 40px;
+}
+.mni5 {
+    width: 20px;
+}
+.nmi6 {
+    width: 40px;
+}
+.mni6 {
+    width: 20px;
+}
+.nmi7 {
+    width: 45px;
+}
+.mni7 {
+    width: 25px;
+}
+.nmi8 {
+    width: 66px;
+}
+.mni8 {
+    width: 45px;
 }
 @keyframes check {
     0% {

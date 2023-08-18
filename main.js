@@ -280,6 +280,8 @@ let lb6 = document.querySelector(".lb6");
 let lb7 = document.querySelector(".lb7");
 let lb8 = document.querySelector(".lb8");
 let recharge = document.querySelector(".buy");
+let nm = document.querySelector(".nm-input");
+let mn = document.querySelector(".mn-input");
 let total = document.querySelector(".pl-money");
 let tm = document.querySelector(".coin-sold-number");
 
@@ -288,48 +290,200 @@ lb1.addEventListener('click' , function(){
     recharge.classList.add("buy-recharge");
     show1.value = "0.74";
     show2.value = "70";
+    nm.classList.add("nmi1");
+    mn.classList.add("mni1");
+    
+    
+    // Remove
+    mn.classList.remove("mni4");
+    nm.classList.remove("nmi4");
+    mn.classList.remove("mni2");
+    nm.classList.remove("nmi2");
+    mn.classList.remove("mni3");
+    nm.classList.remove("nmi3");
+    mn.classList.remove("mni5");
+    nm.classList.remove("nmi5");
+    mn.classList.remove("mni6");
+    nm.classList.remove("nmi6");
+    mn.classList.remove("mni7");
+    nm.classList.remove("nmi7");
+    mn.classList.remove("mni8");
+    nm.classList.remove("nmi8");
 })
 lb2.addEventListener('click' , function(){
     total.value = "3.7";
     recharge.classList.add("buy-recharge");
     show1.value = "3.7";
     show2.value = "350";
+    nm.classList.add("nmi2");
+    mn.classList.add("mni2");
+    
+    
+    // Remove
+    mn.classList.remove("mni1");
+    nm.classList.remove("nmi1");
+    mn.classList.remove("mni4");
+    nm.classList.remove("nmi4");
+    mn.classList.remove("mni3");
+    nm.classList.remove("nmi3");
+    mn.classList.remove("mni5");
+    nm.classList.remove("nmi5");
+    mn.classList.remove("mni6");
+    nm.classList.remove("nmi6");
+    mn.classList.remove("mni7");
+    nm.classList.remove("nmi7");
+    mn.classList.remove("mni8");
+    nm.classList.remove("nmi8");
 })
 lb3.addEventListener('click' , function(){
     total.value = "7.4";
     recharge.classList.add("buy-recharge");
     show1.value = "7.4";
     show2.value = "700";
+    nm.classList.add("nmi3");
+    mn.classList.add("mni3");
+
+
+    // Remove
+    mn.classList.remove("mni1");
+    nm.classList.remove("nmi1");
+    mn.classList.remove("mni2");
+    nm.classList.remove("nmi2");
+    mn.classList.remove("mni4");
+    nm.classList.remove("nmi4");
+    mn.classList.remove("mni5");
+    nm.classList.remove("nmi5");
+    mn.classList.remove("mni6");
+    nm.classList.remove("nmi6");
+    mn.classList.remove("mni7");
+    nm.classList.remove("nmi7");
+    mn.classList.remove("mni8");
+    nm.classList.remove("nmi8");
 })
 lb4.addEventListener('click' , function(){
     total.value = "14.8";
     recharge.classList.add("buy-recharge");
     show1.value = "14.8";
     show2.value = "1400";
+    nm.classList.add("nmi4");
+    mn.classList.add("mni4");
+
+
+    // Remove
+    mn.classList.remove("mni1");
+    nm.classList.remove("nmi1");
+    mn.classList.remove("mni2");
+    nm.classList.remove("nmi2");
+    mn.classList.remove("mni3");
+    nm.classList.remove("nmi3");
+    mn.classList.remove("mni5");
+    nm.classList.remove("nmi5");
+    mn.classList.remove("mni6");
+    nm.classList.remove("nmi6");
+    mn.classList.remove("mni7");
+    nm.classList.remove("nmi7");
+    mn.classList.remove("mni8");
+    nm.classList.remove("nmi8");
 })
 lb5.addEventListener('click' , function(){
     total.value = "37";
     recharge.classList.add("buy-recharge");
     show1.value = "37";
     show2.value = "3,500";
+    nm.classList.add("nmi5");
+    mn.classList.add("mni5");
+    
+    
+    // Remove
+    mn.classList.remove("mni1");
+    nm.classList.remove("nmi1");
+    mn.classList.remove("mni2");
+    nm.classList.remove("nmi2");
+    mn.classList.remove("mni3");
+    nm.classList.remove("nmi3");
+    mn.classList.remove("mni4");
+    nm.classList.remove("nmi4");
+    mn.classList.remove("mni6");
+    nm.classList.remove("nmi6");
+    mn.classList.remove("mni7");
+    nm.classList.remove("nmi7");
+    mn.classList.remove("mni8");
+    nm.classList.remove("nmi8");
 })
 lb6.addEventListener('click' , function(){
     total.value = "74";
     recharge.classList.add("buy-recharge");
     show1.value = "74";
     show2.value = "7,000";
+    nm.classList.add("nmi6");
+    mn.classList.add("mni6");
+    
+    
+    // Remove
+    mn.classList.remove("mni1");
+    nm.classList.remove("nmi1");
+    mn.classList.remove("mni2");
+    nm.classList.remove("nmi2");
+    mn.classList.remove("mni3");
+    nm.classList.remove("nmi3");
+    mn.classList.remove("mni5");
+    nm.classList.remove("nmi5");
+    mn.classList.remove("mni4");
+    nm.classList.remove("nmi4");
+    mn.classList.remove("mni7");
+    nm.classList.remove("nmi7");
+    mn.classList.remove("mni8");
+    nm.classList.remove("nmi8");
 })
 lb7.addEventListener('click' , function(){
     total.value = "185";
     recharge.classList.add("buy-recharge");
     show1.value = "185";
     show2.value = "17,500";
+    nm.classList.add("nmi7");
+    mn.classList.add("mni7");
+    
+    
+    // Remove
+    mn.classList.remove("mni1");
+    nm.classList.remove("nmi1");
+    mn.classList.remove("mni2");
+    nm.classList.remove("nmi2");
+    mn.classList.remove("mni3");
+    nm.classList.remove("nmi3");
+    mn.classList.remove("mni5");
+    nm.classList.remove("nmi5");
+    mn.classList.remove("mni6");
+    nm.classList.remove("nmi6");
+    mn.classList.remove("mni4");
+    nm.classList.remove("nmi4");
+    mn.classList.remove("mni8");
+    nm.classList.remove("nmi8");
 })
 lb8.addEventListener('click' , function(){
     total.value = "10,600";
     recharge.classList.add("buy-recharge");
     show1.value = "10,600";
     show2.value = "1,000,000";
+    nm.classList.add("nmi8");
+    mn.classList.add("mni8");
+    
+    
+    // Remove
+    mn.classList.remove("mni1");
+    nm.classList.remove("nmi1");
+    mn.classList.remove("mni2");
+    nm.classList.remove("nmi2");
+    mn.classList.remove("mni3");
+    nm.classList.remove("nmi3");
+    mn.classList.remove("mni5");
+    nm.classList.remove("nmi5");
+    mn.classList.remove("mni6");
+    nm.classList.remove("nmi6");
+    mn.classList.remove("mni7");
+    nm.classList.remove("nmi7");
+    mn.classList.remove("mni4");
+    nm.classList.remove("nmi4");
 })
 // Test Total $
 
